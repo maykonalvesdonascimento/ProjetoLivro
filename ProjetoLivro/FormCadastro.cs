@@ -82,5 +82,38 @@ namespace ProjetoLivro
             form1.Show();
             Hide();*/
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtId.Text)){
+
+                MessageBox.Show("Preencha o Campo ID para pesquisar");
+            }
+            else { 
+                int id = (int)Convert.ToInt64(txtId.Text);
+                Livro livro = livros.FirstOrDefault(l => l.ID == id);
+
+                if (livro == null)
+                {
+                    MessageBox.Show("Nenhum livro encontrado com esse ID");
+                }
+                else {
+                    MessageBox.Show($"Livro {livro.NomeLivro} encontrado ");
+                    txtNome.Text = livro.NomeLivro;
+                    txtAutor.Text = livro.NomeAutor;
+                    txtPagina.Text = livro.Pagina.ToString();
+                }
+            }
+        }
+
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.IntNumber(e);
+        }
+
+        private void txtPagina_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Program.IntNumber(e);
+        }
     }
 }

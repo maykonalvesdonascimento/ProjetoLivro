@@ -37,6 +37,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtPagina = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -101,6 +102,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(57, 21);
             this.txtId.TabIndex = 6;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // txtNome
             // 
@@ -125,6 +127,18 @@
             this.txtPagina.Name = "txtPagina";
             this.txtPagina.Size = new System.Drawing.Size(82, 21);
             this.txtPagina.TabIndex = 9;
+            this.txtPagina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPagina_KeyPress);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(296, 87);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(91, 23);
+            this.btnPesquisar.TabIndex = 10;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // FormCadastro
             // 
@@ -133,6 +147,7 @@
             this.BackgroundImage = global::ProjetoLivro.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtPagina);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.txtNome);
@@ -160,5 +175,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.TextBox txtPagina;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }
