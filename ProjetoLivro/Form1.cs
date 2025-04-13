@@ -13,7 +13,7 @@ namespace ProjetoLivro
     
     public partial class Form1 : Form
     {
-        public List<Livro> livros;
+        public List<Livro> livros = new List<Livro>();
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +25,9 @@ namespace ProjetoLivro
 
         private void btnFormCadastro_Click(object sender, EventArgs e)
         {
+
+
+
             FormCadastro formcad = new FormCadastro(livros);
             formcad.Show();
             Hide();
