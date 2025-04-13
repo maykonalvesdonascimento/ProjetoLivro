@@ -10,11 +10,24 @@ using System.Windows.Forms;
 
 namespace ProjetoLivro
 {
+    
     public partial class Form1 : Form
     {
+        public List<Livro> livros;
         public Form1()
         {
             InitializeComponent();
+        }
+        public Form1(List<Livro> l) {
+            InitializeComponent();
+             livros = l;
+        }
+
+        private void btnFormCadastro_Click(object sender, EventArgs e)
+        {
+            FormCadastro formcad = new FormCadastro(livros);
+            formcad.Show();
+            Hide();
         }
     }
 }

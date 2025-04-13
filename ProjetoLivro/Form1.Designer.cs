@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnFormCadastro = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnFormCadastro
+            // 
+            this.btnFormCadastro.Location = new System.Drawing.Point(316, 142);
+            this.btnFormCadastro.Name = "btnFormCadastro";
+            this.btnFormCadastro.Size = new System.Drawing.Size(75, 23);
+            this.btnFormCadastro.TabIndex = 0;
+            this.btnFormCadastro.Text = "button1";
+            this.btnFormCadastro.UseVisualStyleBackColor = true;
+            this.btnFormCadastro.Click += new System.EventHandler(this.btnFormCadastro_Click);
             // 
             // Form1
             // 
@@ -37,6 +48,7 @@
             this.BackgroundImage = global::ProjetoLivro.Properties.Resources.backgroundbook;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnFormCadastro);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -44,6 +56,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnFormCadastro;
     }
 }
 
