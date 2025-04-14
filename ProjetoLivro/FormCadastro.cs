@@ -150,5 +150,13 @@ namespace ProjetoLivro
             txtAutor.Clear();
             txtPagina.Clear();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1(livros);
+            frm.Show();
+            Hide();
+
+        }
     }
 }

@@ -19,8 +19,15 @@ namespace ProjetoLivro
             InitializeComponent();
         }
         public Form1(List<Livro> l) {
+            this.FormClosed += Form1_FormClosed;
             InitializeComponent();
              livros = l;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Fechando toda a aplicação
+            Application.Exit();
         }
 
         private void btnFormCadastro_Click(object sender, EventArgs e)
@@ -30,6 +37,13 @@ namespace ProjetoLivro
 
             FormCadastro formcad = new FormCadastro(livros);
             formcad.Show();
+            Hide();
+        }
+
+        private void btnFormPesquisar_Click(object sender, EventArgs e)
+        {
+            FormPesquisar formPesq = new FormPesquisar(livros);
+            formPesq.Show();
             Hide();
         }
     }

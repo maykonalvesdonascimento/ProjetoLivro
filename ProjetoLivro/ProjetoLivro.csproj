@@ -58,6 +58,12 @@
     <Compile Include="FormCadastro.Designer.cs">
       <DependentUpon>FormCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPesquisar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisar.Designer.cs">
+      <DependentUpon>FormPesquisar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Livro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastro.resx">
       <DependentUpon>FormCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPesquisar.resx">
+      <DependentUpon>FormPesquisar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
