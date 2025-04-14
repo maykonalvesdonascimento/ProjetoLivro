@@ -28,28 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnFormCadastro = new System.Windows.Forms.Button();
             this.btnFormPesquisar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFormCadastro
             // 
+            this.btnFormCadastro.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnFormCadastro.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFormCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFormCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.btnFormCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFormCadastro.Location = new System.Drawing.Point(316, 142);
             this.btnFormCadastro.Name = "btnFormCadastro";
-            this.btnFormCadastro.Size = new System.Drawing.Size(75, 23);
+            this.btnFormCadastro.Size = new System.Drawing.Size(143, 23);
             this.btnFormCadastro.TabIndex = 0;
-            this.btnFormCadastro.Text = "button1";
-            this.btnFormCadastro.UseVisualStyleBackColor = true;
+            this.btnFormCadastro.Text = "Cadastrar Livro";
+            this.btnFormCadastro.UseVisualStyleBackColor = false;
             this.btnFormCadastro.Click += new System.EventHandler(this.btnFormCadastro_Click);
             // 
             // btnFormPesquisar
             // 
+            this.btnFormPesquisar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnFormPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFormPesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnFormPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
+            this.btnFormPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFormPesquisar.Location = new System.Drawing.Point(316, 188);
             this.btnFormPesquisar.Name = "btnFormPesquisar";
             this.btnFormPesquisar.Size = new System.Drawing.Size(143, 23);
             this.btnFormPesquisar.TabIndex = 1;
             this.btnFormPesquisar.Text = "Pesquisar Livro";
-            this.btnFormPesquisar.UseVisualStyleBackColor = true;
+            this.btnFormPesquisar.UseVisualStyleBackColor = false;
             this.btnFormPesquisar.Click += new System.EventHandler(this.btnFormPesquisar_Click);
             // 
             // Form1
@@ -61,8 +72,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnFormPesquisar);
             this.Controls.Add(this.btnFormCadastro);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Projeto Livro";
             this.ResumeLayout(false);
 
         }

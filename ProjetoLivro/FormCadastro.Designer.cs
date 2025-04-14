@@ -156,11 +156,11 @@
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(658, 12);
+            this.btnVoltar.Location = new System.Drawing.Point(601, 12);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(85, 23);
+            this.btnVoltar.Size = new System.Drawing.Size(166, 23);
             this.btnVoltar.TabIndex = 12;
-            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.Text = "Voltar Para Tela Inicial";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 

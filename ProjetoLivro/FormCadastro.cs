@@ -25,6 +25,16 @@ namespace ProjetoLivro
             livros = l;
         }
 
+        public FormCadastro(List<Livro> l, Livro livro) {
+            InitializeComponent();
+            this.FormClosed += FormCadastro_FormClosed;
+            livros = l;
+
+            preencherCampos(livro);
+
+
+        }
+
         private void FormCadastro_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Fechando toda a aplicação
@@ -85,13 +95,22 @@ namespace ProjetoLivro
                 }
                 else {
                     MessageBox.Show($"Livro {livro.NomeLivro} encontrado ");
-                    txtNome.Text = livro.NomeLivro;
-                    txtAutor.Text = livro.NomeAutor;
-                    txtPagina.Text = livro.Pagina.ToString();
+                    preencherCampos(livro);
                 }
             }
         }
 
+        private void preencherCampos(Livro livro) {
+
+            txtId.Text = livro.ID.ToString();
+            txtNome.Text = livro.NomeLivro;
+            txtAutor.Text = livro.NomeAutor;
+            txtPagina.Text = livro.Pagina.ToString();
+        }
+
+        private void pesquisar() { 
+        
+        }
         private void txtId_KeyPress(object sender, KeyPressEventArgs e)
         {
             Program.IntNumber(e);

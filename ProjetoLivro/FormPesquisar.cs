@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoLivro
 {
@@ -61,6 +62,7 @@ namespace ProjetoLivro
                 item.SubItems.Add(livro.NomeLivro);
                 item.SubItems.Add(livro.NomeAutor);
                 item.SubItems.Add(livro.Pagina.ToString());
+                item.Tag = livro;
                 listLivros.Items.Add(item);
 
             }
@@ -72,6 +74,32 @@ namespace ProjetoLivro
             Form1 frm = new Form1(livros);
             frm.Show();
             Hide();
+        }
+
+        private void listLivros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listLivros.SelectedItems.Count > 0)
+            {
+                // Recuperar o objeto Livro armazenado no Tag
+
+                var selectedItem = listLivros.SelectedItems[0];
+
+           
+
+                if (selectedItem != null)
+                {
+                    Livro livroSelecionado = (Livro)listLivros.SelectedItems[0].Tag;
+
+                    int id = livroSelecionado.ID;
+                    // Redirecionar para o Form2 e passar o Livro selecionado
+                    FormCadastro formCad = new FormCadastro(livros, livroSelecionado);
+                    formCad.Show();
+                    Hide();
+                }else
+                {
+                    MessageBox.Show("Null");
+                }
+            }
         }
     }
 }
